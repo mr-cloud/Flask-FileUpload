@@ -1,7 +1,7 @@
 {% extends 'fileupload/base.html' %}
 
 {% block extrastyle %}
-    <link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet"/>
+    <link href="{{ url_for('flask_fileupload.static', filename='css/dataTables.bootstrap.min.css') }}" rel="stylesheet"/>
     <link href="{{ url_for('flask_fileupload.static', filename='css/zoom.css') }}" rel="stylesheet"/>
 {% endblock %}
 
@@ -58,8 +58,8 @@
 {% endblock %}
 
 {% block extrajs %}
-    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <script src="{{ url_for('flask_fileupload.static', filename='js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ url_for('flask_fileupload.static', filename='js/dataTables.bootstrap.min.js') }}"></script>
     <script>
         $(document).ready(function() {
             // Build the whole data table
